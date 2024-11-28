@@ -40,16 +40,17 @@ def main():
             product *= byte
         
         # Step 5: Calculate the binary representation of the product
-        product_binary = calculate_product_binary(byte_values)
+        product_binary = product_binary=format(product,'01b')
         
         # Step 6: Convert byte values back to binary representation (8 bits each, no spaces)
         binary_message = convert_bytes_to_binary(byte_values)
+        
+        #Step 8 Conver to binary
         
         # Step 7: Display the results
         print(f"Input Binary: {binary_input}")
         print(f"Byte Values (decoded from binary): {byte_values}")
         print(f"Product of Byte Values: {product}")
-        product_binary=format(product,'01b')
         print(f"Product of Binary: {product_binary}")
         print(f"Decoded Message in Base 256: {base256_message}")
         print(f"Decoded Message binary each 8 bits without spaces: {binary_message}")
